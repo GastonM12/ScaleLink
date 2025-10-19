@@ -1,0 +1,259 @@
+@import "../../assets/css/Animaciones.css";
+
+.service {
+   position: relative;
+   width: 100%;
+   height: 94vh;
+   background-image: url("../src/assets/image/fondo-home.png");
+   background-position: 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 59px;
+   font-weight: bold;
+   z-index: 0; /* asegura que el contenido esté por encima del degradado */
+   overflow: hidden; /* evita que el pseudo-elemento se desborde */
+   background-attachment: fixed;
+}
+
+.service::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 180%;
+   background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+   z-index: -1; /* coloca el degradado detrás del contenido */
+   pointer-events: none; /* no interfiere con clics o interacciones */
+}
+.service h2 {
+   margin-top: -130px;
+   margin-bottom: 20px;
+}
+.content-cotacto {
+   width: 100%;
+}
+.content-service-cards {
+   display: flex;
+}
+.card-service {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.card-service h1 {
+   font-size: 50px;
+   margin-top: -30px;
+   margin-bottom: 20px;
+   letter-spacing: 2%;
+   line-height: 100%;
+   z-index: 1;
+}
+.card-service p {
+   width: 650px;
+   margin-top: 20px;
+   text-align: center;
+   font-size: 14px;
+   font-weight: 400;
+   font-family: "Arial", "Helvetica", sans-serif; /* Fuente legible y moderna */
+   font-size: 16px; /* Tamaño cómodo para leer */
+   line-height: 1.6; /* Espaciado entre líneas */
+   color: #ffffff;
+}
+.service-content-img {
+   position: relative;
+   width: 500px;
+   height: 500px;
+   -webkit-animation: tilt-in-bottom-2 0.9s alternar;
+   animation: tilt-in-bottom-2 0.9s alternar;
+}
+.service-content-img-none{
+      position: relative;
+   width: 500px;
+   height: 500px;
+   -webkit-animation: tilt-in-bottom-2 0.9s alternar;
+   animation: tilt-in-bottom-2 0.9s alternar;
+}
+
+.sercive-img {
+   width: 100%;
+   height: 100%;
+   opacity: 0.49; /* Corregido: usar valor entre 0 y 1 */
+   display: block;
+   object-fit: cover; /* Para que la imagen se ajuste bien */
+}
+
+.service-content-img::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #06060a 100%);
+   z-index: 1; /* Encima de la imagen */
+   pointer-events: none;
+}
+.btn-service {
+   height: 45px;
+   margin-top: 15px;
+   width: 350px;
+   border: 1px solid rgb(0, 0, 0);
+   background-color: #111111;
+}
+/* Mantén todo tu CSS existente y agrega esto al final */
+
+.carousel-controls {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   margin-top: 20px;
+   -webkit-animation: tilt-in-bottom-2 0.9s alternar;
+   animation: tilt-in-bottom-2 0.9s alternar;
+}
+.carousel-controls-none {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   margin-top: 20px;
+   -webkit-animation: tilt-in-bottom-2 0.9s alternar;
+   animation: tilt-in-bottom-2 0.9s alternar;
+}
+
+.carousel-btn {
+   background: rgba(255, 255, 255, 0);
+   border: 0px solid rgba(255, 255, 255, 0.3);
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all 0.3s;
+   color: #fff;
+}
+
+.carousel-btn:hover {
+   background: rgba(255, 255, 255, 0);
+   color: rgb(230, 69, 11);
+   transform: scale(1.1);
+}
+
+.content-service-cards {
+   display: flex;
+   gap: 20px;
+   align-items: center;
+}
+
+.card-service {
+   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+   cursor: pointer;
+}
+
+.card-service.inactive {
+   opacity: 0.5;
+   transform: scale(0.85);
+}
+
+.card-service.inactive .service-content-img {
+   width: 350px;
+   height: 350px;
+}
+.service-title {
+   margin-left: 200px;
+   font-size: 40px;
+   -webkit-animation: tracking-in-expand 0.7s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.service-title-none {
+   margin-left: 200px;
+   font-size: 40px;
+   -webkit-animation: tracking-out-contract 0.7s
+      cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+   animation: tracking-out-contract 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      both;
+}
+.card-service.active {
+   opacity: 1;
+   transform: scale(1);
+}
+.card-service.active .sercive-img {
+   opacity: 0.99;
+}
+
+/* Ocultar contenido de tarjetas inactivas con opacidad */
+.card-service.inactive h1,
+.card-service.inactive p,
+.card-service.inactive .btn-service {
+   opacity: 0;
+   pointer-events: none; /* Evita clics en contenido invisible */
+}
+
+/* Contenido de la tarjeta (para la transición) */
+.card-service h1,
+.card-service p,
+.card-service .btn-service {
+   transition: opacity 0.4s ease-in-out;
+}
+
+/* Animación para el contenido de la tarjeta activa */
+.card-service.active h1,
+.card-service.active p,
+.card-service.active .btn-service {
+   opacity: 0; /* Inicia invisible para que la animación lo muestre */
+   animation: fadeInUp 0.6s 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+/* Indicadores */
+.carousel-indicators {
+   display: flex;
+   gap: 10px;
+   margin-top: 30px;
+}
+
+.indicator {
+   width: 12px;
+   height: 12px;
+   border-radius: 6px;
+   border: none;
+   background-color: rgba(255, 255, 255, 0.3);
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.indicator.active-indicator {
+   width: 40px;
+   background-color: #fff;
+}
+
+@-webkit-keyframes tilt-in-bottom-2 {
+   0% {
+      -webkit-transform: rotateY(-30deg) translateY(300px) skewY(30deg);
+      transform: rotateY(-30deg) translateY(300px) skewY(30deg);
+      opacity: 0;
+   }
+   100% {
+      -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+      transform: rotateY(0deg) translateY(0) skewY(0deg);
+      opacity: 1;
+   }
+}
+@keyframes tilt-in-bottom-2 {
+   0% {
+      -webkit-transform: rotateY(-30deg) translateY(300px) skewY(30deg);
+      transform: rotateY(-30deg) translateY(300px) skewY(30deg);
+      opacity: 0;
+   }
+   100% {
+      -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+      transform: rotateY(0deg) translateY(0) skewY(0deg);
+      opacity: 1;
+   }
+}

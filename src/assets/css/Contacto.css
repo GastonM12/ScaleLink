@@ -1,0 +1,117 @@
+.contacto {
+   position: relative;
+   width: 100%;
+   height: 104vh;
+   background-image: url("../src/assets/image/fondo-home.png");
+   background-position: 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 59px;
+   font-weight: bold;
+   z-index: 0; /* asegura que el contenido esté por encima del degradado */
+   overflow: hidden; /* evita que el pseudo-elemento se desborde */
+   background-attachment: fixed;
+   transform: translate(180deg);
+}
+.contacto::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 300%;
+   background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #00000072 100%);
+   z-index: -1; /* coloca el degradado detrás del contenido */
+   pointer-events: none; /* no interfiere con clics o interacciones */
+}
+
+.content-cotacto {
+   display: flex;
+   height: 100%;
+}
+.contato-datos {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.contato-datos h3 {
+   margin-top: -50px;
+   font-size: 50px;
+}
+.contato-datos p {
+   font-size: 14px;
+   margin: 15px;
+   font-weight: 400;
+}
+.contacto-descripcion {
+   width: 70%;
+   margin: top 60px;
+   margin-bottom: 50px;
+   text-align: center;
+}
+.contato-datos h5 {
+   font-size: 30px;
+   font-weight: 650;
+}
+.content-form {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+
+   align-items: center;
+}
+.formulario {
+   width: 800px;
+   height: 750px;
+   background-image: url("../src/assets/image/fondo-negro.png");
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 59px;
+   font-weight: bold;
+   z-index: 0;
+   overflow: hidden;
+   box-shadow: 2px 28px 47px 0px #000000;
+   opacity: 0.7; /* 🔥 agrega transparencia al div entero */
+}
+.titulo-formulario {
+   font-size: 50px;
+   margin-top: -70px;
+   margin-bottom: 70px;
+}
+.label-input {
+   width: 75%;
+   font-size: 20px;
+   font-weight: 400;
+   text-align: start;
+}
+.inputUno {
+   margin-bottom: 30px;
+   height: 35px;
+   width: 75%;
+   background-color: transparent;
+   border: none; /* quita todos los bordes */
+   border-bottom: 1px solid rgb(87, 87, 87); /* agrega solo el borde inferior */
+}
+.btn-enviar{
+   margin-top: 50px;
+   margin-bottom: -70px;
+   height: 5vh;
+   border: 0px;
+   background-color: rgb(24, 24, 24);
+   box-shadow: 2px 28px 47px 0px #000000;
+   width: 15vw;
+}

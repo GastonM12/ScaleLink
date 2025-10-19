@@ -1,0 +1,121 @@
+.pricing-section {
+   position: relative;
+   width: 100%;
+   height: 94vh;
+   background-image: url("../src/assets/image/fondo-home.png");
+   background-position: 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 59px;
+   font-weight: bold;
+   z-index: 0; /* asegura que el contenido esté por encima del degradado */
+   overflow: hidden; /* evita que el pseudo-elemento se desborde */
+   background-attachment: fixed;
+   transform: translate(180deg);
+}
+
+.pricing-section::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(
+      to top,
+      rgb(0, 0, 0) 0%,
+      hsla(240, 20%, 2%, 0.363) 100%
+   );
+   z-index: -1; /* coloca el degradado detrás del contenido */
+   pointer-events: none; /* no interfiere con clics o interacciones */
+}
+
+.pricing-title {
+   font-size: 50px;
+   font-weight: bold;
+   margin-bottom: 60px;
+   color: #fff;
+   z-index: 2;
+}
+
+.pricing-container {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   flex-wrap: wrap;
+   z-index: 2;
+}
+
+.pricing-card {
+   background-color: rgba(255, 255, 255, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 20px;
+   padding: 40px;
+   width: 360px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   backdrop-filter: blur(12px);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.pricing-card:hover {
+   transform: translateY(-15px) scale(1.03);
+   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card.featured {
+   transform: scale(1.05);
+   border: 2px solid #4d94ff;
+}
+
+.tier-title {
+   font-size: 28px;
+   font-weight: 700;
+   color: #fff;
+   margin-bottom: 25px;
+}
+
+.tier-features {
+   list-style: none;
+   padding: 0;
+   margin: 25px 0;
+   width: 100%;
+}
+
+.tier-features li {
+   font-size: 16px;
+   color: #c0c0c0;
+   line-height: 1.8;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   padding: 10px 0;
+}
+
+.tier-features li:last-child {
+   border-bottom: none;
+}
+
+.btn-consultar {
+   background-color: #4d94ff;
+   color: #fff;
+   border: none;
+   border-radius: 10px;
+   padding: 15px 30px;
+   font-size: 16px;
+   font-weight: 600;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+   margin-top: auto;
+}
+
+.btn-consultar:hover {
+   background-color: #367dff;
+   transform: scale(1.05);
+}
