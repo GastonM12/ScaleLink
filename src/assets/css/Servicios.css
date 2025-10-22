@@ -31,24 +31,25 @@
    z-index: -1; /* coloca el degradado detrás del contenido */
    pointer-events: none; /* no interfiere con clics o interacciones */
 }
-.service h2 {
-   margin-top: -130px;
-   margin-bottom: 20px;
-}
-.content-cotacto {
-   width: 100%;
-}
+
 .content-service-cards {
    display: flex;
+   -webkit-animation: slide-in-fwd-center 2s;
+   animation: slide-in-fwd-center 2s;
+}
+.content-service-cards-none {
+   display: flex;
+   -webkit-animation: scale-out-center 1s;
+   animation: scale-out-center 1s;
 }
 .card-service {
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-.card-service h1 {
+.card-service h3 {
    font-size: 50px;
-   margin-top: -30px;
+   margin-top: -50px;
    margin-bottom: 20px;
    letter-spacing: 2%;
    line-height: 100%;
@@ -72,8 +73,8 @@
    -webkit-animation: tilt-in-bottom-2 0.9s alternar;
    animation: tilt-in-bottom-2 0.9s alternar;
 }
-.service-content-img-none{
-      position: relative;
+.service-content-img-none {
+   position: relative;
    width: 500px;
    height: 500px;
    -webkit-animation: tilt-in-bottom-2 0.9s alternar;
@@ -121,8 +122,8 @@
    align-items: center;
    gap: 30px;
    margin-top: 20px;
-   -webkit-animation: tilt-in-bottom-2 0.9s alternar;
-   animation: tilt-in-bottom-2 0.9s alternar;
+   -webkit-animation: slide-in-fwd-center 1s;
+   animation: slide-in-fwd-center 1s;
 }
 
 .carousel-btn {
@@ -165,8 +166,13 @@
    width: 350px;
    height: 350px;
 }
+.content-servicio {
+   width: 100%;
+
+}
 .service-title {
    margin-left: 200px;
+   margin-bottom: 20px;
    font-size: 40px;
    -webkit-animation: tracking-in-expand 0.7s
       cubic-bezier(0.215, 0.61, 0.355, 1) both;
@@ -189,7 +195,7 @@
 }
 
 /* Ocultar contenido de tarjetas inactivas con opacidad */
-.card-service.inactive h1,
+.card-service.inactive h3,
 .card-service.inactive p,
 .card-service.inactive .btn-service {
    opacity: 0;
@@ -197,14 +203,14 @@
 }
 
 /* Contenido de la tarjeta (para la transición) */
-.card-service h1,
+.card-service h3,
 .card-service p,
 .card-service .btn-service {
    transition: opacity 0.4s ease-in-out;
 }
 
 /* Animación para el contenido de la tarjeta activa */
-.card-service.active h1,
+.card-service.active h3,
 .card-service.active p,
 .card-service.active .btn-service {
    opacity: 0; /* Inicia invisible para que la animación lo muestre */

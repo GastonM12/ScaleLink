@@ -42,7 +42,7 @@
    justify-content: center;
    align-items: center;
 }
-.contato-datos h3 {
+.contato-datos h2 {
    margin-top: -50px;
    font-size: 50px;
 }
@@ -57,7 +57,7 @@
    margin-bottom: 50px;
    text-align: center;
 }
-.contato-datos h5 {
+.contato-datos h4 {
    font-size: 30px;
    font-weight: 650;
 }

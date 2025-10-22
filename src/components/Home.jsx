@@ -7,27 +7,27 @@ import iconsX from "../assets/icons/icons8-x-50.png";
 import iconsInsta from "../assets/icons/icons8-insta-50.png";
 const Home = () => {
    return (
-      <div className="home">
+      <main className="home">
          <div className="containerRedes">
             <div className="redes">
-               <img src={iconsFacebook} alt="" width={"25px"} />
-               <img src={iconsInsta} alt="" width={"25px"} />
-               <img src={iconsX} alt="" width={"25px"} />
+               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img src={iconsFacebook} alt="Facebook" width={"25px"} /></a>
+               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img src={iconsInsta} alt="Instagram" width={"25px"} /></a>
+               <a href="https://x.com" target="_blank" rel="noopener noreferrer"><img src={iconsX} alt="X" width={"25px"} /></a>
             </div>
          </div>
-         <div className="containerTitle">
+         <section className="containerTitle">
             <span className="lineaHome">We are</span>
             <h1 className="titleHome">ScaleLink</h1>
             <Typewriter />
           
-         </div>
+         </section>
          <div className="containerLinks">
             <p>
                Projects
                <span></span>
             </p>
          </div>
-      </div>
+      </main>
    );
 };
 

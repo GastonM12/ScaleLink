@@ -52,9 +52,11 @@
 }
 
 .pricing-card {
-   background-color: rgba(255, 255, 255, 0.1);
+   background: rgba(39, 41, 43, 0.18);
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
    border: 1px solid rgba(255, 255, 255, 0.2);
-   border-radius: 20px;
+   border-radius: 3px;
    padding: 40px;
    width: 360px;
    display: flex;
@@ -63,17 +65,17 @@
    text-align: center;
    backdrop-filter: blur(12px);
    transition: transform 0.3s ease, box-shadow 0.3s ease;
-   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.973);
 }
 
 .pricing-card:hover {
    transform: translateY(-15px) scale(1.03);
-   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.226);
 }
 
 .pricing-card.featured {
    transform: scale(1.05);
-   border: 2px solid #4d94ff;
+   border: 2px solid #0f0f0f;
 }
 
 .tier-title {
@@ -103,19 +105,22 @@
 }
 
 .btn-consultar {
-   background-color: #4d94ff;
+   background-color: #1111117a;
    color: #fff;
    border: none;
-   border-radius: 10px;
+   border-radius: 5px;
    padding: 15px 30px;
    font-size: 16px;
    font-weight: 600;
    cursor: pointer;
    transition: background-color 0.3s ease, transform 0.3s ease;
    margin-top: auto;
+   caja-sombra: 7px 10px 26px 3px rgba(0,0,0,0.75);
+-webkit-caja-sombra: 7px 10px 26px 3px rgba(0,0,0,0.75);
+-moz-caja-sombra: 7px 10px 26px 3px rgba(0,0,0,0.75);
 }
 
 .btn-consultar:hover {
-   background-color: #367dff;
+   background-color: #f06000;
    transform: scale(1.05);
 }

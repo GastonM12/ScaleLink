@@ -18,7 +18,7 @@ function App() {
             y: window.scrollY,
          };
          setScrollPosition(newScrollPosition);
-         console.log("Posición de scroll:", newScrollPosition);
+
       };
       // Añadir el event listener al montar el componente
       window.addEventListener("scroll", handleScroll);
@@ -30,7 +30,7 @@ function App() {
 
    return (
       <div className="containerHome">
-         <Nav />
+         <Nav scrollPosition={scrollPosition} />
          <Home />
          <Servicios scrollPosition={scrollPosition} />
          <Contacto />

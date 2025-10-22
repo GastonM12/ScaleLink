@@ -4,11 +4,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import image from "../assets/image/serviceUno.png";
 import imageDos from "../assets/image/serviceDos.png";
 import imageTres from "../assets/image/serviceTres.png";
+
 import "../assets/css/Servicios.css";
 
 const Servicios = ({ scrollPosition }) => {
    const [activeIndex, setActiveIndex] = useState(1); // Card del medio activa
-   console.log(scrollPosition.y === 400);
 
    const services = [
       {
@@ -48,9 +48,9 @@ const Servicios = ({ scrollPosition }) => {
    };
 
    return (
-      <div className="service">
-         <div className="content-cotacto">
-            <h1
+      <section className="service">
+         <div className="content-servicio">
+            <h2
                className={
                   scrollPosition.y >= 200
                      ? "service-title"
@@ -58,7 +58,7 @@ const Servicios = ({ scrollPosition }) => {
                }
             >
                Servicios
-            </h1>
+            </h2>
          </div>
 
          <div className="carousel-controls">
@@ -66,7 +66,13 @@ const Servicios = ({ scrollPosition }) => {
                <ChevronLeft size={30} />
             </button>
 
-            <div className="content-service-cards">
+            <div
+               className={
+                  scrollPosition.y >= 250
+                     ? "content-service-cards"
+                     : "content-service-cards-none"
+               }
+            >
                {services.map((service, index) => {
                   const isActive = index === activeIndex;
 
@@ -87,7 +93,7 @@ const Servicios = ({ scrollPosition }) => {
                         </div>
                         {isActive && (
                            <>
-                              <h1>{service.title}</h1>
+                              <h3>{service.title}</h3>
                               <p>{service.description}</p>
                               <button className="btn-service">
                                  View Service
@@ -116,7 +122,7 @@ const Servicios = ({ scrollPosition }) => {
                />
             ))}
          </div>
-      </div>
+      </section>
    );
 };
 

@@ -39,15 +39,15 @@ const CasosExito = () => {
    ];
 
    return (
-      <div className="pricing-section">
-         <h1 className="pricing-title">Nuestros Servicios</h1>
+      <section className="pricing-section">
+         <h2 className="pricing-title">Nuestros Servicios</h2>
          <div className="pricing-container">
             {servicesAsTiers.map((tier, index) => (
                <div
                   key={index}
                   className={`pricing-card ${tier.featured ? "featured" : ""}`}
                >
-                  <h2 className="tier-title">{tier.title}</h2>
+                  <h3 className="tier-title">{tier.title}</h3>
                   <ul className="tier-features">
                      {tier.features.map((feature, i) => (
                         <li key={i}>{feature}</li>
@@ -57,7 +57,7 @@ const CasosExito = () => {
                </div>
             ))}
          </div>
-      </div>
+      </section>
    );
 };
 

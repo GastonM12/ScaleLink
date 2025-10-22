@@ -1,22 +1,57 @@
 .containerNav {
    width: 100%;
+   max-width: 100%;
    height: 90px;
    position: fixed;
    top: 0;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   z-index: 1;
+   padding: 0 20px;
+   box-sizing: border-box;
+   z-index: 1000;
+
+   /* Fondo glass profesional */
+
+   /* Transición sincronizada */
+   transition: max-width 0.8s cubic-bezier(0.4, 0, 0.2, 1), background 0.6s ease,
+      border 0.6s ease;
 }
+
+.containerNav.shrink {
+   max-width: 60%; /* se achica manteniendo el centrado automático */
+   background: rgba(39, 41, 43, 0.35);
+   border-left: 2px solid rgba(255, 255, 255, 0.2);
+   border-right: 2px solid rgba(255, 255, 255, 0.2);
+   border-bottom: 2px solid rgba(255, 255, 255, 0.438);
+   background: rgba(39, 41, 43, 0.18);
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+
+   border-radius: 0px 0px 50px 50px;
+}
+
+/* Logo */
 .logoNav {
-   height: 12em;
-   padding: 1.5em;
-   margin-top:29px;
-   will-change: filter;
-   transition: filter 300ms;
+   height: 60px;
+   width: auto;
+   object-fit: contain;
+   transition: height 0.5s ease;
 }
-.containerNav a{
-    text-decoration: none;
-    margin: 2rem;
-    color: white;
+
+/* Links */
+.containerNav a {
+   text-decoration: none;
+   color: white;
+   margin: 0 1.5rem;
+   font-size: 1rem;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+
+.containerNav a:hover {
+   color: #f07900;
 }
